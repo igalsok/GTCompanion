@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "685392960962",
+    "firebase_url": "https://goaltime-89347.firebaseio.com",
+    "project_id": "goaltime-89347",
+    "storage_bucket": "goaltime-89347.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:685392960962:android:f1cb2875268ae2bc138a5b",
+        "android_client_info": {
+          "package_name": "com.example.goaltime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "685392960962-jkgeak65shlt4r3rfubopo81bbh3nil9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.goaltime",
+            "certificate_hash": "faeed4e13ad1a0f5c1e6e16d51eb071f5382ea64"
+          }
+        },
+        {
+          "client_id": "685392960962-0skbnfcqlfqkj1lqbt6d9pk3637hkf3d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCW_T4e-DT5j2q5xFbIwtyzz1vbkj25QjQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "685392960962-0skbnfcqlfqkj1lqbt6d9pk3637hkf3d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

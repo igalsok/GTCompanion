@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">GT Companion</string>
+    <string name="Login">התחבר</string>
+    <string name="Scoreboard">לוח רייטינג</string>
+    <string name="username">שם משתמש</string>
+    <string name="password">סיסמה</string>
+    <string name="startMatchDay">התחל יום משחקים</string>
+    <string name="addNewPlayer">הוסף שחקן חדש</string>
+    <string name="version">גרסה 1.2</string>
+    <string name="addPlayer">הוסף שחקן</string>שם השחקן
+    <string name="PlayerName">שם השחקן</string>
+    <string name="nameError">השם כבר קיים במערכת</string>
+    <string name="Continue">המשך</string>
+    <string name="FirstTeam">הנמרים</string>
+    <string name="SecondTeam">הכרישים</string>
+    <string name="ThirdTeam">השפנים</string>
+    <string name="startGame">התחל משחק</string>
+    <string name="finishMatchDay">סיים יום משחקים</string>
+    <string name="finishGame">סיים</string>
+    <string name="Goal">גול</string>
+    <string name="Assist">בישול</string>
+    <string name="Back">חזור</string>
+    <string name="logout">התנתק</string>
+    <string name="checkMatch">בודק האם קיים יום משחקים</string>
+</resources>
