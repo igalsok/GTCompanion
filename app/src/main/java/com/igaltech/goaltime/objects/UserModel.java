@@ -1,9 +1,9 @@
-package com.igaltech.goaltime;
+package com.igaltech.goaltime.objects;
 
 public class UserModel {
 
-    boolean isSelected;
-    String userName;
+    private boolean isSelected;
+    private String userName;
 
     //now create constructor and getter setter method using shortcut like command+n for mac & Alt+Insert for window.
 

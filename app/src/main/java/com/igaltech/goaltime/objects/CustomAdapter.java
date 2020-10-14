@@ -1,4 +1,4 @@
-package com.igaltech.goaltime;
+package com.igaltech.goaltime.objects;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.igaltech.goaltime.R;
 
 import java.util.List;
 

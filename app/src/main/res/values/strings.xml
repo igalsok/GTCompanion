@@ -7,7 +7,7 @@
     <string name="startMatchDay">התחל יום משחקים</string>
     <string name="addNewPlayer">הוסף שחקן חדש</string>
     <string name="version">גרסה 1.2</string>
-    <string name="addPlayer">הוסף שחקן</string>שם השחקן
+    <string name="addPlayer">הוסף שחקן</string>
     <string name="PlayerName">שם השחקן</string>
     <string name="nameError">השם כבר קיים במערכת</string>
     <string name="Continue">המשך</string>
@@ -22,4 +22,20 @@
     <string name="Back">חזור</string>
     <string name="logout">התנתק</string>
     <string name="checkMatch">בודק האם קיים יום משחקים</string>
+    <string name="register">הרשם</string>
+    <string name="joinTeam">הצטרף לקבוצה</string>
+    <string name="createNewTeam">צור קבוצה חדשה</string>
+    <string name="teamId">מספר קבוצה</string>
+    <string name="createTeam">צור קבוצה</string>
+    <string name="teamName">שם הקבוצה</string>
+    <string name="email">אימייל</string>
+    <string name="settings">הגדרות</string>
+    <string name="teamNumber">מספר קבוצות משחקות</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="exitGroup">יציאה מהקבוצה</string>
+    <string name="fourthTeam">הקופים</string>
+    fourthTeam
+
+
 </resources>

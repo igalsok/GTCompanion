@@ -10,8 +10,53 @@
     android:layoutDirection="ltr"
     android:focusableInTouchMode="true"
     android:textAlignment="center"
-    tools:context=".MenuActivity">
+    tools:context=".activities.MenuActivity">
 
+    <ImageView
+        android:id="@+id/imgView_smallLogo"
+        android:layout_width="match_parent"
+        android:layout_height="343dp"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.001"
+        app:srcCompat="@drawable/logo"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btn_settingsUser"
+        android:layout_width="202dp"
+        android:layout_height="53dp"
+        android:background="@drawable/button_states"
+        android:fontFamily="sans-serif"
+        android:text="@string/settings"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btn_raitingUser"
+        android:layout_width="326dp"
+        android:layout_height="59dp"
+        android:background="@drawable/button_states"
+        android:fontFamily="sans-serif"
+        android:text="@string/Scoreboard"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        tools:visibility="visible" />
     <Button
         android:id="@+id/btn_startMatchDay"
         android:layout_width="326dp"
@@ -25,7 +70,7 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.313"
+        app:layout_constraintVertical_bias="0.4"
         tools:visibility="visible" />
 
     <Button
@@ -48,34 +93,32 @@
         android:id="@+id/btn_addNewPlayer"
         android:layout_width="202dp"
         android:layout_height="53dp"
-        android:layout_marginBottom="112dp"
         android:background="@drawable/button_states"
         android:fontFamily="sans-serif"
         android:text="@string/addNewPlayer"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.572"
+        app:layout_constraintVertical_bias="0.55"
         tools:visibility="visible" />
 
     <Button
         android:id="@+id/btn_scoreboardAdmin"
         android:layout_width="202dp"
         android:layout_height="53dp"
-        android:layout_marginBottom="32dp"
         android:background="@drawable/button_states"
         android:fontFamily="sans-serif"
         android:text="@string/Scoreboard"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.673"
+        app:layout_constraintVertical_bias="0.7"
         tools:visibility="visible" />
 
     <TextView
@@ -217,4 +260,125 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_settings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ee555555"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_exitGroup"
+            android:layout_width="326dp"
+            android:layout_height="59dp"
+            android:background="@drawable/button_states3"
+            android:fontFamily="sans-serif"
+            android:text="@string/exitGroup"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.8"
+            tools:visibility="visible" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.4">
+
+            <RadioButton
+                android:id="@+id/radioButton_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/three"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/radioButton_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/four"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView_numOfTeams"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/teamNumber"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+        </RadioGroup>
+
+        <ImageButton
+            android:id="@+id/btn_revertSettings"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.922"
+            app:srcCompat="@drawable/revert" />
+
+        <TextView
+            android:id="@+id/textView_teamName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2" />
+
+        <TextView
+            android:id="@+id/textView_teamIdtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/teamId"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1" />
+
+        <TextView
+            android:id="@+id/textView_teamId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView_teamIdtext"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.igaltech.goaltime;
+package com.igaltech.goaltime.objects;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -8,6 +8,7 @@ public class MatchDay{
     private Team teamOne;
     private Team teamTwo;
     private Team teamThree;
+    private Team teamFour;
     private Date date;
     private boolean finished;
 
@@ -55,6 +56,9 @@ public class MatchDay{
         this.teamOne = teamOne;
     }
 
+    public Team getTeamFour() { return teamFour; }
+    public void setTeamFour(Team teamFour) {this.teamFour = teamFour; }
+
     public void teamByIdSet(Team team){
         switch(new BigDecimal(team.getTeamId()).intValueExact()) {
             case 0:
@@ -71,4 +75,6 @@ public class MatchDay{
 
 
     }
+
+
 }

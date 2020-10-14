@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layoutDirection="ltr"
     android:background="@drawable/championsbackground"
-    tools:context=".RaitingBoardActivity">
+    tools:context=".activities.RaitingBoardActivity">
 
    <ProgressBar
        android:id="@+id/progressBar_rating"

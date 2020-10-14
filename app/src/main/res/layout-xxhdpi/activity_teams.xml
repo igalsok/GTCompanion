@@ -5,32 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/entrance"
-    tools:context=".TeamsActivity">
+    tools:context=".activities.TeamsActivity">
 
     <LinearLayout
         android:id="@+id/layout_teamThree"
-        android:layout_width="189dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:background="#996A6464"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintHorizontal_bias="0.65"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.273">
-
-        <CheckBox
-            android:id="@+id/checkBox_3"
-            android:layout_width="wrap_content"
-            android:layout_height="24dp"
-            android:layout_gravity="center" />
-
-        <ListView
-            android:id="@+id/lv_third"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center" />
+        app:layout_constraintVertical_bias="0.1">
 
         <TextView
             android:id="@+id/textView3"
@@ -40,20 +28,32 @@
             android:textAlignment="center"
             android:textColor="#FFFFFF" />
 
+        <ListView
+            android:id="@+id/lv_third"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center" />
+
+        <CheckBox
+            android:id="@+id/checkBox_3"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center" />
+
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="189dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:background="#996A6464"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintHorizontal_bias="0.35"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.273">
+        app:layout_constraintVertical_bias="0.1">
 
         <TextView
             android:id="@+id/textView2"
@@ -61,7 +61,8 @@
             android:layout_height="wrap_content"
             android:text="@string/SecondTeam"
             android:textAlignment="center"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
 
         <ListView
             android:id="@+id/lv_second"
@@ -80,16 +81,16 @@
 
     <LinearLayout
         android:id="@+id/layout_teamOne"
-        android:layout_width="189dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:background="#996A6464"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.273">
+        app:layout_constraintVertical_bias="0.1">
 
         <TextView
             android:id="@+id/textView"
@@ -97,7 +98,8 @@
             android:layout_height="wrap_content"
             android:text="@string/FirstTeam"
             android:textAlignment="center"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
 
         <ListView
             android:id="@+id/lv_first"
@@ -114,6 +116,43 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/layout_teamFour"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="#996A6464"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fourthTeam"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <ListView
+            android:id="@+id/lv_fourth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center" />
+
+        <CheckBox
+            android:id="@+id/checkBox_4"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center" />
+
+
+    </LinearLayout>
+
     <Button
         android:id="@+id/btn_startGame"
         android:layout_width="168dp"
@@ -122,10 +161,10 @@
         android:text="@string/startGame"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.701"
+        app:layout_constraintHorizontal_bias="0.7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.923" />
+        app:layout_constraintVertical_bias="0.95" />
 
     <Button
         android:id="@+id/btn_endMatchDay"
@@ -135,8 +174,8 @@
         android:text="@string/finishMatchDay"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.261"
+        app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.923" />
+        app:layout_constraintVertical_bias="0.95" />
 </androidx.constraintlayout.widget.ConstraintLayout>

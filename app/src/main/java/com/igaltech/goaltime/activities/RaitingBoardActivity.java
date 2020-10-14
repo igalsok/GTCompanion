@@ -1,4 +1,4 @@
-package com.igaltech.goaltime;
+package com.igaltech.goaltime.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,11 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
+
+import com.igaltech.goaltime.objects.CallBack;
+import com.igaltech.goaltime.objects.DBUpdate;
+import com.igaltech.goaltime.objects.Player;
+import com.igaltech.goaltime.R;
 
 import java.util.ArrayList;
 
@@ -35,6 +40,7 @@ public class RaitingBoardActivity extends AppCompatActivity implements CallBack<
     @Override
     protected  void onStart(){
         super.onStart();
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         progressBar = (ProgressBar)findViewById(R.id.progressBar_rating);
         table = (SortableTableView) findViewById(R.id.table);
         table.setHeaderBackgroundColor(Color.parseColor("#2ecc71"));
@@ -82,6 +88,8 @@ public class RaitingBoardActivity extends AppCompatActivity implements CallBack<
     @Override
     public void onResume(){
         super.onResume();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
 

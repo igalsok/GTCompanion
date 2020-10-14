@@ -1,4 +1,4 @@
-package com.igaltech.goaltime;
+package com.igaltech.goaltime.objects;
 
 import java.io.Serializable;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.igaltech.goaltime;
+package com.igaltech.goaltime.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -14,6 +14,11 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.igaltech.goaltime.objects.DBUpdate;
+import com.igaltech.goaltime.objects.Player;
+import com.igaltech.goaltime.R;
+import com.igaltech.goaltime.objects.Team;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -247,7 +252,8 @@ public class GameActivity extends AppCompatActivity implements Serializable, Vie
     @Override
     public void onResume() {
         super.onResume();
-
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
     public void onWindowFocusChanged(boolean hasFocus) {

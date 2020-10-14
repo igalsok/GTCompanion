@@ -8,20 +8,12 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:685392960962:android:f1cb2875268ae2bc138a5b",
+        "mobilesdk_app_id": "1:685392960962:android:e5186e2cc20a7474138a5b",
         "android_client_info": {
           "package_name": "com.igaltech.goaltime"
         }
       },
       "oauth_client": [
-        {
-          "client_id": "685392960962-jkgeak65shlt4r3rfubopo81bbh3nil9.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.igaltech.goaltime",
-            "certificate_hash": "faeed4e13ad1a0f5c1e6e16d51eb071f5382ea64"
-          }
-        },
         {
           "client_id": "685392960962-0skbnfcqlfqkj1lqbt6d9pk3637hkf3d.apps.googleusercontent.com",
           "client_type": 3

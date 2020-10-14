@@ -1,4 +1,4 @@
-package com.igaltech.goaltime;
+package com.igaltech.goaltime.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +21,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.igaltech.goaltime.objects.CustomAdapter;
+import com.igaltech.goaltime.objects.Player;
+import com.igaltech.goaltime.R;
+import com.igaltech.goaltime.objects.UserModel;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -31,12 +35,14 @@ public class ChoosePlayersActivity  extends AppCompatActivity implements Seriali
 
     private ListView listView;
     private Button continueBtn;
-    private HashMap<String,Player> players;
+    private HashMap<String, Player> players;
     FirebaseFirestore db ;
     private ProgressBar progressBar;
     private TextView count;
     private int countPlayers = 0;
-    private static final String COUNT_STRING = " / 15";
+    private static final long COUNT =  5;
+    private String teamId;
+    private long numOfTeams;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,10 +54,15 @@ public class ChoosePlayersActivity  extends AppCompatActivity implements Seriali
         listView = (ListView) findViewById(R.id.listview);
         continueBtn = (Button) findViewById(R.id.btn_continue);
         count = (TextView)findViewById(R.id.txtView_count);
+        Bundle b = getIntent().getExtras();
+        if(b!=null) {
+            teamId = b.getString("teamId");
+            numOfTeams = b.getLong("numOfTeams");
+        }
     }
     public void onStart() {
         super.onStart();
-        String newString = String.valueOf(countPlayers) + COUNT_STRING;
+        String newString = String.valueOf(countPlayers) + "/" + String.valueOf(COUNT*numOfTeams);
         count.setText(newString);
         progressBar = (ProgressBar)findViewById(R.id.progressBar_choose);
         players = new HashMap<>();
@@ -63,28 +74,30 @@ public class ChoosePlayersActivity  extends AppCompatActivity implements Seriali
 
                 int playersCount = 0;
                 for(UserModel model : users){
-                    if(model.isSelected)
+                    if(model.isSelected())
                         playersCount++;
                 }
-                if(playersCount==15) {
+                if(playersCount==COUNT*numOfTeams) {
                     for (UserModel model : users) {
-                        if (!model.isSelected) {
+                        if (!model.isSelected()) {
                             players.remove(model.getUserName());
                         }
                     }
                     Intent teamsIntent = new Intent(ChoosePlayersActivity.this, TeamsActivity.class);
                     teamsIntent.putExtra("playersHashMap", players);
+                    teamsIntent.putExtra("numOfTeams",numOfTeams);
+                    teamsIntent.putExtra("teamId",teamId);
                     startActivity(teamsIntent);
                     finish();
                 }
                 else{
-                    Toast.makeText(ChoosePlayersActivity.this, "צריך בדיוק 15 שחקנים!",
+                    Toast.makeText(ChoosePlayersActivity.this," שחקנים!" + COUNT*numOfTeams +"צריך בדיוק " ,
                             Toast.LENGTH_SHORT).show();
                 }
 
             }
         });
-        db.collection("players").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        db.collection("teams").document(teamId).collection("players").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
@@ -101,14 +114,14 @@ public class ChoosePlayersActivity  extends AppCompatActivity implements Seriali
                             UserModel model = users.get(i);
                             if (model.isSelected()) {
                                 countPlayers--;
-                                String newString = (String.valueOf(countPlayers) + COUNT_STRING);
+                                String newString = (String.valueOf(countPlayers) +"/" +  String.valueOf(COUNT*numOfTeams));
                                 count.setText(newString);
                                 changeCountColor();
                                 model.setSelected(false);
                             }
                             else {
                                 countPlayers++;
-                                String newString = (String.valueOf(countPlayers) + COUNT_STRING);
+                                String newString = (String.valueOf(countPlayers) +"/" +  String.valueOf(COUNT*numOfTeams));
                                 count.setText(newString);
                                 changeCountColor();
                                 model.setSelected(true);
@@ -129,12 +142,12 @@ public class ChoosePlayersActivity  extends AppCompatActivity implements Seriali
     public void onResume() {
         super.onResume();
         countPlayers = 0;
-        String newString = String.valueOf(countPlayers) + COUNT_STRING;
+        String newString = String.valueOf(countPlayers) + "/" + String.valueOf(COUNT*numOfTeams);
         count.setText(newString);
     }
 
     private void changeCountColor() {
-        if (countPlayers != 15) {
+        if (countPlayers != COUNT*numOfTeams) {
             count.setTextColor(Color.parseColor("#ff3232"));
         } else
         {
